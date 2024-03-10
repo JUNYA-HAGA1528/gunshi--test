@@ -1,0 +1,8 @@
+@use "global" as *;
+
+.top-frature{
+    margin-top: rem(93);
+    @media screen and (max-width:990px) {
+        margin-top: rem(40);
+    }
+}

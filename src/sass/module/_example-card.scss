@@ -1,0 +1,85 @@
+@use "global" as *;
+
+.example-card{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: rem(10);
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    @include mq(md){
+        padding: rem(15);
+    }
+}
+
+.example-card__img{
+    cursor: pointer;
+    overflow: hidden;
+    width: 100%;  
+}
+
+.example-card__img img{
+    aspect-ratio: 277/166;
+    width: 100%;
+    height: auto;
+    transition: transform .3s ease; /* ゆっくり変化させる */
+    object-fit: cover;
+    @include mq(md){
+        aspect-ratio: 230/138;
+    }
+}
+
+.example-card__img:hover img {
+    transform: scale(1.1); /* 拡大 */
+  }
+
+.example-card__content {
+    display: flex; /* 子要素を縦方向に配置する */
+    flex-direction: column; /* 子要素を縦方向に配置する */
+    // flex-grow: 1; /* 親要素の高さを満たす */
+}
+
+.example-card__text{
+    font-size: clamp(15px,1.5vw,18px);
+    // flex-grow: 1; /* 親要素の高さを満たす */
+}
+  
+.example-card__table{
+    border: none;
+    text-align: left;
+}
+
+  
+.example-card__table{
+    padding: 0.5em 0;
+}
+  
+.example-card__table th{
+    width: rem(70);
+    font-weight: bold;
+}
+  
+  
+.example-card__tag-text{
+    background: #2EA0C9;
+}
+  
+.example-card__tag{
+    margin-bottom: rem(5);
+}
+
+.example-card__order-text{
+    background: #C9A52E;
+}
+  
+.example-card__tag-text,
+.example-card__order-text{
+    padding: 0 rem(5);
+    display: inline-block;
+    padding-top: rem(2.5);
+    color: #fff;
+    margin-right: rem(5);
+    font-size: rem(12);
+    margin-bottom: rem(3);
+    transition: .3s;
+}
+  

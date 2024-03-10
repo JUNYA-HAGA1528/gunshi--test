@@ -1,0 +1,79 @@
+@use "global" as *;
+
+.form__inner{
+    max-width: rem(800);
+    margin: 0 auto;
+    padding: 0 rem(15);
+}
+
+.form__list{
+    @include mq(md){
+        display: flex;
+    }
+}
+  
+.form__list:not(:last-child) {
+    margin-bottom: 30px;
+}
+  
+.form_title{
+    width: 100%;
+    @include mq(md){
+        width: 22%;
+    }
+}
+  
+.form__list input,
+.form__list textarea{
+    width: 100%;
+    @include mq(md){
+        width: 78%;
+    }
+}
+    
+.form_title{
+    margin-top: rem(9.6);
+    font-family: yu-gothic-pr6n, sans-serif;
+    font-size: rem(20);
+    line-height: calc(35/20);
+    font-weight: 400;
+    display: block;
+}
+    
+.form_input{
+    font-family: yu-gothic-pr6n, sans-serif;
+    font-size: rem(20);
+    padding: rem(12) rem(5);
+    border: solid 1px #000;
+    border-radius: rem(5);
+    background-color: #fff;
+}
+  
+.form_textarea{
+    font-family: yu-gothic-pr6n, sans-serif;
+    min-height: rem(198);
+    padding: rem(12) rem(5);
+    border: solid 1px #000;
+    border-radius: rem(5);
+    background-color: #fff;
+}
+    
+.form_button{
+    margin-top: rem(67.2);
+    text-align: center;
+}
+  
+.form_button span{
+    font-family: yu-gothic-pr6n, sans-serif;
+    text-align: center;
+    display: inline-block;
+    width: rem(296);
+    padding: rem(15) 0;
+    font-size: rem(20);
+    line-height: 1.4;
+    transition: 0.3s;
+    letter-spacing: 0.1em;
+    color: #fff;
+    border-radius: rem(5);
+    background-color: #2DA0C9;
+}

@@ -1,0 +1,100 @@
+@use "global" as *;
+
+.frature{
+    text-align: center;
+}
+
+.frature__en{
+    font-size: rem(24);
+    font-weight: 700;
+}
+
+.frature__jp{
+    font-family: yu-gothic-pr6n, sans-serif;
+    font-weight: 700;
+    margin-top: rem(5);
+    font-size:rem(36);
+    line-height: calc(96.25/55);
+    letter-spacing: 0.1em;
+    position: relative;
+    @include mq(md){
+        margin-top: rem(19.2);
+        font-size:rem(55);
+        line-height: calc(96.25/55);
+    }
+}
+
+.frature__jp::before{
+    background-image: url(../images/common/icon_1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    content: "";
+    top: rem(-10);
+    right: calc(50% - min(50%, rem(200)));
+    width: rem(70);
+    height: rem(70);
+    z-index: 100;
+    @include mq(md){
+        background-image: url(../images/common/icon_1.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        content: "";
+        top: rem(-20);
+        right: calc(50% - min(50%, rem(307)));
+        width: rem(108);
+        height: rem(108);
+        z-index: 100;
+    }
+}
+
+.frature__content{
+    background-image: url(../images/common/frature-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: rem(40);
+    @include mq(md){
+        margin-top: rem(56);
+    }
+}
+
+.frature__inner{
+    padding: 0 rem(15);
+}
+
+.frature__sentence{
+    font-size: rem(18);
+    line-height: calc(43.75/25);
+    letter-spacing: 0.1em;
+    padding: rem(60) 0;
+    text-shadow: 7px 7px 7px #fff, -7px -7px 7px #fff,
+    -7px 7px 7px #fff,  7px -7px 7px #fff,
+    7px 0 7px #fff, -7px  0 7px #fff,
+    0 7px 7px #fff,  0 -7px 7px #fff;
+    @include mq(md){
+        font-size: rem(25);
+        padding: rem(80) 0;
+    }
+}
+
+.frature__subtitle{
+    border-top: solid 1px #fff ;
+    border-bottom: solid 1px #fff ;
+    display: inline-block;
+    padding: rem(40) 0 rem(32);
+    font-weight: 500;
+}
+
+.frature-br{
+    @media screen and (max-width:480px) {
+        display: none;
+    }
+}
+
+.frature__text{
+    margin-top:rem(46) ;
+}

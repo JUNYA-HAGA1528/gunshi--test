@@ -1,0 +1,130 @@
+@use "global" as *;
+
+.charm-cards{
+    @include mq(md){
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.charm-cards__item{
+    position: relative;
+    @include mq(md){
+        max-width: calc(33.3333% - 2rem * 2 / 3 );
+        width: 100%;
+    }
+}
+
+.charm-cards__item + .charm-cards__item{
+    margin-top: rem(40);
+    @include mq(md){
+        margin-top: 0;
+        margin-left: rem(32);
+    }
+}
+
+/* 枚数が増えたときのための処理 */
+.charm-cards__item:nth-child(3n + 1){
+    @include mq(md){
+        margin-left: 0;
+    }
+}
+
+/* 枚数が増えたときのための処理 */
+.charm-cards__item:nth-child(n + 4){
+    @include mq(md){
+        margin-top: 2.5rem;
+    }
+}
+
+
+.charm-cards__number{
+    text-align: center;
+    position: relative;
+    bottom: rem(-30);
+    width: 50%;
+    background-color: #fff;
+    margin: 0 auto;
+    text-decoration: underline rem(5) ;
+    font-size: rem(36);
+    letter-spacing: 0.1em;
+}
+
+.charm-cards__content {
+    border: 1px solid #000;
+    background-color: #fff;
+    text-align: center;
+    padding-top: rem(60);
+    padding-bottom: rem(30);
+    height: 95%; /* 親要素(.charm-cards__item)の高さいっぱいに拡張 */
+    @include mq(md){
+        padding-bottom: 0;
+    }
+}
+
+.charm-cards__head{
+    font-family: ta-oonishi, sans-serif;
+    font-size: rem(25);
+    line-height: calc(35/25);
+    letter-spacing: 0.1em;
+    background: linear-gradient(transparent 60%, #D1E881 0%);
+    display: inline;
+}
+
+.charm-cards__head--second{
+    background: linear-gradient(transparent 60%, #A1D1EB 0%);
+}
+
+.charm-cards__head--third{
+    background: linear-gradient(transparent 60%, #F7AFAF 0%);
+}
+
+.charm-cards__img-first{
+    margin-top: rem(44);
+    text-align: center;
+    flex-grow: 1;
+}
+
+.charm-cards__img-first img{
+    aspect-ratio: 247/191;
+    width: rem(247);
+    height: rem(191);
+    object-fit: cover;
+    margin: auto;
+}
+.charm-cards__img-second{
+    margin-top: rem(40);
+    text-align: center;
+    flex-grow: 1;
+}
+
+.charm-cards__img-second img{
+    aspect-ratio: 215/191;
+    width: rem(215);
+    height: rem(191);
+    object-fit: cover;
+    margin: auto;
+}
+
+.charm-cards__img-third{
+    margin-top: rem(25.6);
+    text-align: center;
+    flex-grow: 1;
+}
+
+.charm-cards__img-third img{
+    aspect-ratio: 137/117;
+    width: rem(137);
+    height: rem(117);
+    object-fit: cover;
+    margin: auto;
+}
+
+
+.charm-cards__text {
+    margin-top: rem(32);
+    font-size: rem(20);
+    line-height: calc(25/20);
+    letter-spacing: 0.1em;
+    flex-grow: 1; /* 余白を埋めるために伸縮可能 */
+}

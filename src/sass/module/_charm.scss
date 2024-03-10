@@ -1,0 +1,43 @@
+@use "global" as *;
+
+.charm{
+    position: relative;
+}
+
+.charm::before{
+    background-image: url(../images/common/icon_2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    content: "";
+    bottom: rem(0);
+    left: calc(50% - min(50%, rem(270)));
+    width: rem(120);
+    height: rem(99);
+    z-index: 100;
+    @include mq(md){
+        bottom: rem(60);
+        left: calc(50% - min(50%, rem(600)));
+        width: rem(151);
+        height: rem(99);
+        z-index: 100;
+    }
+}
+
+
+.charm__inner{
+    max-width: rem(540);
+    padding: 0 rem(15);
+    margin: 0 auto;
+    @include mq(md){
+        max-width: rem(1140);
+    }
+}
+
+.charm__list{
+    margin-top: rem(0);
+    @include mq(md){
+        margin-top: rem(40);
+    }
+}

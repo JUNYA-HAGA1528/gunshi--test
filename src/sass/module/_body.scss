@@ -1,0 +1,23 @@
+@use "global" as *;
+
+
+.body{
+    color: #333;
+    font-family: 游ゴシック体, YuGothic, "游ゴシック Medium", "Yu Gothic Medium", 游ゴシック, "Yu Gothic", sans-serif;
+}
+
+.body a{
+    transition: .3s;
+    cursor: pointer;
+}
+  
+
+
+.header{
+    height:rem(93.6) ;
+    background-color: #000;
+    @media screen and (max-width:1200px) {
+        height:rem(67.3) ;
+    }
+}
+

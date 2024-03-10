@@ -1,0 +1,83 @@
+@use "global" as *;
+
+.contact{
+    position: relative;
+}
+
+.contact::before{
+    @include mq(md){
+        background-image: url(../images/common/icon_4.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        content: "";
+        bottom: rem(160);
+        left: calc(50% - min(50%, rem(380)));
+        width: rem(156);
+        height: rem(168);
+        z-index: 100;
+    }
+}
+
+
+.contact__inner{
+    max-width: rem(540);
+    margin: 0 auto;
+    padding: 0 rem(15);
+    @include mq(md){
+        max-width: rem(1140);
+    }
+}
+
+.contact__sentence{
+    font-family: yu-gothic-pr6n, sans-serif;
+    font-weight: 400;
+    margin-top: rem(70);
+    text-align: center;
+    @include mq(md){
+        margin-top: rem(136);
+    }
+}
+
+
+
+.contact__text-top,
+.contact__text-bottom{
+    font-size: rem(20);
+    line-height: calc(56/26.3);
+    letter-spacing: 0.1em;
+    @include mq(md){
+        font-size: rem(26.3);
+    }
+}
+
+.contact__text-middle{
+    margin-top: rem(48);
+}
+
+.contact__text-middle p{
+    font-size: rem(26);
+    line-height: 2;
+    letter-spacing: 0.1em;
+    color: #2DA0C9;
+    @include mq(md){
+        font-size: rem(32);
+        line-height: calc(56/26.3);   
+    }
+}
+
+.contact__text-bottom{
+    margin-top: rem(40);
+}
+
+
+.contact__form{
+  padding-top: rem(48);
+  line-height:1.2188;
+  color: #333;
+  letter-spacing: 0.05em;
+}
+
+
+

@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.top-charm{
+    margin-top: rem(80);
+    padding-bottom: rem(80);
+    @include mq(md){
+        margin-top: rem(128);
+        padding-bottom: rem(172);
+    }
+}
