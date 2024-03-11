@@ -1,5 +1,35 @@
 @use "global" as *;
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul,
+ol {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+
+
 
 .body{
     color: #333;
@@ -7,11 +37,23 @@
 }
 
 .body a{
-    transition: .3s;
     cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.3s;
 }
-  
 
+.body a:not([class]) {
+    text-decoration-skip-ink: auto;
+  }
+  
+  
+.body img{
+    max-width: 100%;
+    display: block;
+    width: 100%;
+      
+}
 
 .header{
     height:rem(93.6) ;

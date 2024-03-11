@@ -1,6 +1,7 @@
 @use "global" as *;
 
 .charm-cards{
+    list-style: none;
     @include mq(md){
         display: flex;
         flex-wrap: wrap;
